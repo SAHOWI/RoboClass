@@ -248,7 +248,21 @@ int main()
         cout << p[l].show_pose() << endl;
     }
 
+       //Now, simulate motion for each particle
+    //Create a new particle set 'p2'
+    //Rotate each particle by 0.1 and move it forward by 5.0
+    //Assign p2 to p and print the particle poses, each on a single line
     
+    //Now, simulate motion for each particle
+    //TODO: Create a new particle set 'p2'
+    //TODO: Rotate each particle by 0.1 and move it forward by 5.0
+    //TODO: Assign 'p2' to 'p' and print the particle poses, each on a single line
+     Robot p2[n];
+     for (int l = 0; l < n; l++) {
+        p2[l] = p[l].move(0.1, 5.0);
+        p[l] = p2[l];
+        cout << p[l].show_pose() << endl;
+    }
     
     
     return 0;
